@@ -1,0 +1,226 @@
+<!--If this web page is visited without html parameters, it will select a random
+    subject code to use. If it is visited with an ?id=XXX, it will
+    use XXX as the participant code.
+
+  -->
+
+
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="apple-touch-icon" sizes="57x57" href="icons/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="icons/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="icons/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="icons/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="icons/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="icons/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="icons/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="icons/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="icons/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="icons/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="icons/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
+<link rel="manifest" href="icons/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="icons/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+<title>Welcome to the Study</title>
+<h2>Please Use webpages' buttons, not browser</h2> 
+</head>
+<body bgcolor="white" text="#000000" link="#204A4E" vlink="#204A4E" alink="#204A4E" style="width: 960px">
+
+  <h1> CXAI Auto study</h1>
+
+
+ Thanks for participating in this study.
+
+ 
+ 
+ 
+<p>
+<!-- <p id="demo2"></p> -->
+
+<!-- <a href="/home/tauseef/Desktop/laravel_projects/cxai-auto-50-b/index_1.html">Visit W3Schools.com!</a> -->
+
+<div id ="enter_code" >
+<input type="text" placeholder="Write Participant ID" id="p_id" name="p_id" >
+<button type="button" class="btn btn-success p_id_done">Done</button>
+</div>
+<div style = "display: none;" id="navigation_bar">
+  <h3>Click the Button after you are DONE</h3>
+  <button type="button" class="btn btn-success complete_study">Done</button>
+
+
+  <hr style=" border: 10px solid green;border-radius: 5px;">
+<h3>Topics</h3>
+  <a  style="font-size: 30px" href="https://cxai-auto-50-b.netlify.app/autopilot.html">#autopilot - autopilot Feature of Tesla</a><br>
+
+  <a  style="font-size: 30px" href="https://cxai-auto-50-b.netlify.app/in_road_items.html">#inRoadItems - Vehicles, Stationary Objects, Animals, etc.</a><br>
+  <a  style="font-size: 30px" href="https://cxai-auto-50-b.netlify.app/lane_maintenance.html">#laneMaintenance - Lane Management</a><br>
+  <a  style="font-size: 30px" href="https://cxai-auto-50-b.netlify.app/neighborhood.html">#neighborhood - Neighborhood or Residential Areas</a><br>
+  <a  style="font-size: 30px" href="https://cxai-auto-50-b.netlify.app/traffic_signals.html">#trafficSignals - Traffic Signals</a><br>
+  <a  style="font-size: 30px" href="https://cxai-auto-50-b.netlify.app/traffic_signs.html">#trafficSigns - Traffic Signs</a><br>
+  <a  style="font-size: 30px" href="https://cxai-auto-50-b.netlify.app/turning.html">#turning - Vehicle Turning </a><br>
+  <a style="font-size: 30px" href="https://cxai-auto-50-b.netlify.app/sentry_mode.html">#sentryMode - sentry mode Feature of Tesla</a><br>
+  <a  style="font-size: 30px" href="https://cxai-auto-50-b.netlify.app/vehicle_warnings.html">#vehicleWarnings - In Vehicle Warnings </a><br>
+  <a  style="font-size: 30px" href="https://cxai-auto-50-b.netlify.app/vigilance.html">#vigilance - Driver's Vigilance</a><br>
+  <a  style="font-size: 30px" href="https://cxai-auto-50-b.netlify.app/unexpected_stopping_slowing_down.html">#unexpectedStopping/SlowingDown - Unexpected Stopping/Slowing Down of the Vehicle</a><br>
+</div>
+</body>
+
+
+
+<script>
+  var p_id="";
+  $(function() {
+
+
+    p_id= localStorage.getItem('p_id');
+
+    if(parseFloat(p_id) > 0){
+
+       $("#enter_code").hide();
+
+       $("#navigation_bar").show();
+
+    }
+    if($('#enter_code').is(':visible'))
+    {
+// alert(localStorage.getItem('p_id'));
+      localStorage.setItem('p_id', "0");
+      localStorage.setItem('autopilot', "0");
+      localStorage.setItem('inRoadItems', "0");
+      localStorage.setItem('laneMaintenance', "0");
+      localStorage.setItem('neighborhood', "0");
+      localStorage.setItem('trafficSignals', "0");
+      localStorage.setItem('trafficSigns', "0");
+      localStorage.setItem('turning', "0");
+      localStorage.setItem('sentryMode', "0");
+      localStorage.setItem('vehicleWarnings', "0");
+      localStorage.setItem('unexpectedStopping_SlowingDown', "0");
+       localStorage.setItem('vigilance', "0");
+
+       //$("#enter_code").show();
+
+       //$("#navigation_bar").hide();
+     }
+
+    
+});
+
+$(".p_id_done").click(function(){
+
+    p_id = localStorage.getItem('p_id');
+    //alert(p_id);
+    if($('#enter_code').is(':visible'))
+    {
+      //alert("dfd");
+      localStorage.setItem('p_id', $('#p_id').val());
+
+       $("#enter_code").hide();
+
+       $("#navigation_bar").show();
+   }
+   
+});
+
+function download(filename, text) {
+  var element = document.createElement('a');
+  element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
+  element.setAttribute('download', filename);
+
+  element.style.display = 'none';
+  document.body.appendChild(element);
+
+  element.click();
+
+  document.body.removeChild(element);
+}
+$(".complete_study").click(function(){
+
+
+       $("#enter_code").show();
+
+       $("#navigation_bar").hide();
+
+       var text =   "pID: "+localStorage.getItem('p_id')
+       +"\n"+
+  "autopilot: "+localStorage.getItem('autopilot')+"\n"+
+  "inRoadItems: "+localStorage.getItem('inRoadItems')+"\n"+
+  "laneMaintenance: "+localStorage.getItem('laneMaintenance')+"\n"+
+  "neighborhood: "+localStorage.getItem('neighborhood')+"\n"+
+  "trafficSignals: "+localStorage.getItem('trafficSignals')+"\n"+
+  "trafficSigns: "+localStorage.getItem('trafficSigns')+"\n"+
+  "turning: "+localStorage.getItem('turning')+"\n"+
+  "sentryMode: "+localStorage.getItem('sentryMode')+"\n"+
+  "vehicleWarnings: "+localStorage.getItem('vehicleWarnings')+"\n"+
+  "unexpectedStopping_SlowingDown: "+localStorage.getItem('unexpectedStopping_SlowingDown')+"\n"+
+   "vigilance: "+localStorage.getItem('vigilance')+"\n";
+   var file_name = localStorage.getItem('p_id') + '.txt';
+   download(file_name, text);
+ // download('test.txt', 'Hello world!\nHello world!');
+
+  localStorage.removeItem('p_id');
+  localStorage.removeItem('autopilot');
+  localStorage.removeItem('inRoadItems');
+  localStorage.removeItem('laneMaintenance');
+  localStorage.removeItem('neighborhood');
+  localStorage.removeItem('trafficSignals');
+  localStorage.removeItem('trafficSigns');
+  localStorage.removeItem('turning');
+  localStorage.removeItem('sentryMode');
+  localStorage.removeItem('vehicleWarnings');
+  localStorage.removeItem('unexpectedStopping_SlowingDown');
+   localStorage.removeItem('vigilance');
+
+   $("#enter_code").show();
+
+   $("#navigation_bar").hide();
+
+
+ 
+
+
+   $.ajax({
+        url: "mail.php",
+        cache: false,
+
+        data: {
+
+          name: text,
+          
+          submit_check_1: "submit_check_1"
+
+
+        },
+        type: 'POST',
+        async: false,
+        success: function (data) {
+          console.log("Success");
+          //console.log(data);
+          
+       
+        
+          },
+
+           error: function (jqXHR, status, err) {
+              console.log("fail");
+              //location.reload(true);
+
+
+
+            }
+        })
+
+});
+</script>
+
+
